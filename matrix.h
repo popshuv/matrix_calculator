@@ -14,6 +14,10 @@ public:
     Matrix operator-(const Matrix& other);
     Matrix operator*(const Matrix& other);
 
+    Matrix transpose();
+    Matrix display();
+
+
     double& at(int row, int col);
     double at(int row, int col) const;
 

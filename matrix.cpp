@@ -68,6 +68,18 @@ Matrix Matrix::operator*(const Matrix& other) {
     return result;
 }
 
+// Transpose the matrix
+Matrix Matrix::transpose() {
+    Matrix result(cols, rows);  
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < cols; ++j) {
+            result.data[j][i] = data[i][j];  
+        }
+    }
+    return result;
+}
+
+
 // Element access (non-const)
 double& Matrix::at(int row, int col) {
     return data[row][col];

@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Matrix.cpp"
+#include "Matrix.h"
 
 int main() {
     // Create two matrices of size 2x2
@@ -35,6 +35,13 @@ int main() {
     std::cout << "Matrix A * B:\n";
     std::cout << E.at(0, 0) << " " << E.at(0, 1) << std::endl;
     std::cout << E.at(1, 0) << " " << E.at(1, 1) << std::endl;
+
+    
+    // Test Matrix transpose
+    Matrix F = A.transpose();
+    std::cout << "Transpose of Matrix A:\n";
+    std::cout << F.at(0, 0) << " " << F.at(0, 1) << std::endl;
+    std::cout << F.at(1, 0) << " " << F.at(1, 1) << std::endl;
 
     return 0;
 }
