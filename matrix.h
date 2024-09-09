@@ -15,8 +15,7 @@ public:
     Matrix operator*(const Matrix& other);
 
     Matrix transpose();
-    Matrix display();
-
+    int determinant();
 
     double& at(int row, int col);
     double at(int row, int col) const;

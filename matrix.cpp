@@ -79,6 +79,15 @@ Matrix Matrix::transpose() {
     return result;
 }
 
+// Get determinant
+int Matrix::determinant() {
+    Matrix result(rows, cols);
+    int a = result.data[0][0] * result.data[1][1];
+    int b = result.data[1][0] * result.data[0][1];
+    int det = a - b;
+    return det;
+}
+
 
 // Element access (non-const)
 double& Matrix::at(int row, int col) {
