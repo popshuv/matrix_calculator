@@ -82,6 +82,10 @@ Matrix Matrix::transpose() {
 // Get determinant
 int Matrix::determinant() {
     Matrix result(rows, cols);
+    if (rows > 2 || cols > 2) {
+        std::cout << "Determinant may only be calculated if matrix is of size 2x2";
+        return 1;
+    }
     int a = result.data[0][0] * result.data[1][1];
     int b = result.data[1][0] * result.data[0][1];
     int det = a - b;
